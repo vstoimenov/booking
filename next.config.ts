@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  outputFileTracingExcludes: {
-    "/*": ["./work/**/*", "./outputs/**/*"],
-  },
+    outputFileTracingIncludes: {
+          "/*": ["./node_modules/next/dist/lib/framework/**/*"],
+    },
+    outputFileTracingExcludes: {
+          "/*": ["./work/**/*", "./outputs/**/*"],
+    },
 };
 
 export default nextConfig;
